@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What to do today? | make TODO.</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body>
+   
+      <div class="nav">
+        <h4>From Chaos to Chai-yos: Sip, Plan, and Conquer with To-Do Today!😉</h4>
+      </div>
+      <div class="main">
+      <div class="container">
+        <div class="title">
+          <h2>Manage your task<span> @UserName</span></h2>
+          <button class="plus" id="plus" onclick="hide()">
+            <i class="ri-add-line" id="icon"></i>
+          </button>
+         
+        </div>
+       
+        <div class="title-input">
+          <p>Create a todo to manage all your task in one place.</p>
+          <div id="hideDisplay">
+            <div class="div">
+                <input
+                  type="text"
+                  name=""
+                  id="text-area"
+                  class="text-area" 
+                  placeholder="eg: Complete college project.. "/>
+                <input type="date" name="date" id="date-input" class="date" />
+              </div>
+              <button class="btn" onclick="addtask()">Add Task</button>
+          </div>
+          
+        </div>
+      </div>
+      <div class="todos-container" id="todos-container">
+      <!-- <div class="container2">
+        <div class="task-2">
+          <div class="task-1">
+            <input type="checkbox" class="checkbox" />
+            <input type="text" class="task" value="Work'n Progress...">
+          </div>
+            <div class="dueDate">Monday 23 April</div>
+        </div>
+        <button class="delete" ></button>
+      </div> -->
+    </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
