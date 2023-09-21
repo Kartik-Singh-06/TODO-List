@@ -3,6 +3,15 @@ let taskContainer = document.getElementById("hideDisplay");
 let todosContainer = document.getElementById("todos-container");
 taskContainer.classList.add("d-none");
 
+// Load todos from local storage when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+  let storedTodos = localStorage.getItem('todos');
+  if (storedTodos) {
+    todos = JSON.parse(storedTodos);
+    render(); // Render the loaded todos
+  }
+});
+
 addtask = ()=>{
     let textArea = document.getElementById("text-area");
     let dateArea = document.getElementById("date-input");
@@ -17,6 +26,8 @@ addtask = ()=>{
     todos.push(temptodo);
     render();
     console.log(todos)
+     // Save todos to local storage
+    localStorage.setItem('todos', JSON.stringify(todos) );
 }
 
 render=()=>{
@@ -84,8 +95,8 @@ render=()=>{
     container.appendChild(delete1);
 
   })
-   
-
+     // Save todos to local storage after rendering
+  localStorage.setItem('todos',JSON.stringify(todos));
 }
 // + button area show input field 
 hide =()=>{
